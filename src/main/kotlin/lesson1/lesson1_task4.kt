@@ -7,7 +7,7 @@ fun main() {
     val partOfDay = 0.075F
     val seconds: Short = 6480
     val partOfYear = 2.0547945205479453E-4
-    val apogee = 327000
+    val apogee: Int = 327000
 
     println(length)
     println(age)
