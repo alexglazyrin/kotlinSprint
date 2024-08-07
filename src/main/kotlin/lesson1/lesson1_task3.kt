@@ -7,9 +7,9 @@ fun main() {
     var minute: String = "07"
 
     println("Время взлета:")
-    println(year)
-    println(hour)
-    println(minute)
+    println("Год: $year")
+    println("Часы: $hour")
+    println("Минуты: $minute")
 
     hour = "10"
     minute = "55"
