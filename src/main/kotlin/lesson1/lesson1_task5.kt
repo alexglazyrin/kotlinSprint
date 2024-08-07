@@ -8,5 +8,4 @@ fun main() {
     val seconds = flyingGagarinInSeconds % 3600 % 60
 
     println("Полет Ю. Гагарина длился: $hour:$minutes:$seconds")
-
 }
