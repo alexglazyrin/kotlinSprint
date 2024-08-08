@@ -8,5 +8,5 @@ fun main(){
     val studentPoint4: Int = 5
 
     val overagePoint: Double = (studentPoint1 + studentPoint2 + studentPoint3 + studentPoint4)/4.0
-    println("Overage point: $overagePoint")
+    println("%.2f".format(overagePoint))
 }
