@@ -7,7 +7,7 @@ fun main(){
     var finalDeposit: Double = startBalance.toDouble()
 
     for (year in 1..20){
-        finalDeposit = finalDeposit + finalDeposit * depositPercent / 100
+        finalDeposit += finalDeposit * depositPercent / 100
         println("Сумма на вкладе после $year года: ${"%.3f".format(finalDeposit)}")
     }
 }
