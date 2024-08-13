@@ -8,11 +8,10 @@ fun main() {
 
     var motionToServer = "$motionFrom-$motionTo;$motionNumber"
 
-    val parts = motionToServer.split("-")
+    val parts = motionToServer.split("-", ";")
     motionFrom = parts[0]
-    val parts2 = parts[1].split(";")
-    motionTo = parts2[0]
-    motionNumber = parts2[1].toInt()
+    motionTo = parts[1]
+    motionNumber = parts[2].toInt()
 
     println("""
         $motionFrom
