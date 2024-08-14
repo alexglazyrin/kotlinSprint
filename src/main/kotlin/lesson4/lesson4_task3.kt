@@ -7,20 +7,14 @@ fun main() {
     val humidity = 20
     val season = "Зима"
 
-
-    println(
-        "Благоприятные ли условия сейчас для роста бобовых? " +
-                "${
-                    isSunny == GOOD_IS_SUNNY
-                            && isOpen == GOOD_IS_OPEN
-                            && humidity >= MIN_GOOD_HUMIDITY
-                            && !season.equals(
-                        NOT_GOOD_SEASON,
-                        true
-                    )
-                }"
-    )
-
+    val isGoodWeather = isSunny == GOOD_IS_SUNNY &&
+            isOpen == GOOD_IS_OPEN &&
+            humidity >= MIN_GOOD_HUMIDITY &&
+            !season.equals(
+                NOT_GOOD_SEASON,
+                true,
+            )
+    println("Благоприятные ли условия сейчас для роста бобовых? $isGoodWeather")
 }
 
 const val GOOD_IS_SUNNY = true
