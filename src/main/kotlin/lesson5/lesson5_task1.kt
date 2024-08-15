@@ -5,12 +5,12 @@ import kotlin.random.nextInt
 
 fun main() {
 
-    val firstNumber = Random.nextInt(0, 100)
-    val secondNumber = Random.nextInt(0, 100)
+    val firstNumber = (1..10).random()
+    val secondNumber = (1..10).random()
 
     println("Введите сумму двух чисел: $firstNumber, $secondNumber")
 
-    val userAnswer = readLine()!!.toInt()
+    val userAnswer = readLine()?.toInt()
     val systemResponse: String
 
     if (userAnswer == firstNumber + secondNumber) {
