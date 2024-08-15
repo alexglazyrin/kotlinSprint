@@ -6,7 +6,7 @@ fun main() {
 
     println("Введите год вашего рождения:")
 
-    val userYearBorn = readLine()!!.toInt()
+    val userYearBorn = readln()!!.toInt()
     val thisYear = Year.now().toString().toInt()
 
     if (thisYear - userYearBorn >= AGE_OF_MAJORITY)
