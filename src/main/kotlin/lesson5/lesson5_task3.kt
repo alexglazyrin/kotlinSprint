@@ -3,35 +3,20 @@ package org.example.lesson5
 fun main() {
 
     println("Введите первое число: ")
-    val firstNumber = readLine()!!.toInt()
+    val firstNumber = readln().toInt()
     println("Введите второе число: ")
-    val secondNumber = readLine()!!.toInt()
+    val secondNumber = readln().toInt()
     var isWin = false
     var isHalfWin = false
 
-    when (firstNumber) {
-        FIRST_WIN_NUMBER -> {
-            if (secondNumber == SECOND_WIN_NUMBER)
-                isWin = true
-            isHalfWin = true
-        }
-        SECOND_WIN_NUMBER -> {
-            if (secondNumber == FIRST_WIN_NUMBER)
-                isWin = true
-            isHalfWin = true
-        }
-    }
-    when (secondNumber) {
-        FIRST_WIN_NUMBER -> {
-            if (firstNumber == SECOND_WIN_NUMBER)
-                isWin = true
-            isHalfWin = true
-        }
-        SECOND_WIN_NUMBER -> {
-            if (firstNumber == FIRST_WIN_NUMBER)
-                isWin = true
-            isHalfWin = true
-        }
+    if ((firstNumber == FIRST_WIN_NUMBER && secondNumber == SECOND_WIN_NUMBER) ||
+        (firstNumber == SECOND_WIN_NUMBER && secondNumber == FIRST_WIN_NUMBER)
+    ) {
+        isWin = true
+    } else if ((firstNumber == FIRST_WIN_NUMBER || secondNumber == FIRST_WIN_NUMBER) ||
+        (firstNumber == SECOND_WIN_NUMBER || secondNumber == SECOND_WIN_NUMBER)
+    ) {
+        isHalfWin = true
     }
 
     if (isWin)
@@ -40,8 +25,6 @@ fun main() {
         println("Вы выиграли поощрительный приз")
     else
         println("Испытайте удачу еще раз")
-
-
 }
 
 const val FIRST_WIN_NUMBER = 16
