@@ -2,22 +2,15 @@ package org.example.lesson5
 
 fun main() {
 
-    val firstNumber = (1..42).random()
-    val secondNumber = (1..42).random()
-    val thirdNumber = (1..42).random()
+    val numbers = listOf(
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber()
+    )
 
+    println("Введите три числа (разделяя пробелом): ")
 
-    val numbers = listOf(firstNumber, secondNumber, thirdNumber)
-
-    println("Введите три числа: ")
-    println("Первое: ")
-    val firstUserNumber = readln().toInt()
-    println("Второе: ")
-    val secondUserNumber = readln().toInt()
-    println("Третье: ")
-    val thirdUserNumber = readln().toInt()
-
-    val userNumbers = listOf(firstUserNumber, secondUserNumber, thirdUserNumber)
+    val userNumbers = readln().split(" ").map { it.toString().toInt() }
     val winNumberCount = numbers.intersect(userNumbers).size
 
     when (winNumberCount) {
@@ -29,3 +22,10 @@ fun main() {
 
     println(numbers)
 }
+
+fun getRandomNumber(): Int {
+    return (1..42).random()
+}
+
+const val MIN_NUMBER = 1
+const val MAX_NUMBER = 42
